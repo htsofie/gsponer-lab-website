@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gsponer Lab</title>
+<meta name="description" content="The Gsponer Lab at the Michael Smith Laboratories, University of British Columbia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="31" fill="var(--accent)"/>
+    <path fill="#fff" d="M14 42C12 29 18 18 30 16c7-1 12 2 15 6l10 3c0 4-4 7-8 7l-1 2c-2 8-9 15-19 17l-5 5-2-8c-4-1-6-4-6-8z"/>
+    <path fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" d="M20 40c4-2 8-2 12 1M22 46c4-2 7-2 10 0"/>
+    <circle cx="39" cy="25" r="2.6" fill="var(--accent)"/>
+    <path stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" d="M34 21l9 3"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Gsponer Lab home">
+      <svg><use href="#logo"/></svg>
+      <span><b>Gsponer Lab</b><small>MICHAEL SMITH LABORATORIES · UBC</small></span>
+    </a>
+    <nav id="nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#people">People</a>
+      <a href="#join">Join</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#software">Software</a>
+      <a href="#databases">Databases</a>
+    </nav>
+  </div>
+</header>
+
+<div class="fx" aria-hidden="false">
+  <div class="eagle" aria-hidden="true">
+    <svg viewBox="0 0 220 130">
+      <g class="wing" style="animation-delay:.12s"><path d="M104 54C92 26 70 10 40 6c16 14 20 26 24 38 8-4 16-2 20 4 8-4 16 0 24 6z" fill="var(--eagle-wing2)" stroke="var(--eagle-line)" stroke-width="1.5" stroke-linejoin="round"/></g>
+      <path d="M78 58L34 48l-4 12 4 12 44-4z" fill="#fff" stroke="var(--eagle-line)" stroke-width="1.5" stroke-linejoin="round"/>
+      <ellipse cx="112" cy="62" rx="40" ry="16" fill="var(--eagle-body)" stroke="var(--eagle-line)" stroke-width="1.5"/>
+      <path d="M104 76l-4 16M122 76l2 16" stroke="#e8b22e" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M80 102q8-20 16 0t16 0t16 0t16 0t14 -2" fill="none" stroke="var(--accent)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M80 102q8-20 16 0t16 0t16 0t16 0t14 -2" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-2)"/>
+      <circle cx="80" cy="102" r="5.5" fill="var(--accent)"/><circle cx="174" cy="100" r="5.5" fill="var(--accent)"/>
+      <path d="M138 62c6-4 10-8 12-14" stroke="var(--eagle-line)" stroke-width="0" fill="none"/>
+      <circle cx="152" cy="50" r="15" fill="#fff" stroke="var(--eagle-line)" stroke-width="1.5"/>
+      <path d="M163 46l20 8c-2 7-11 9-17 6l-2-5z" fill="#f2b632" stroke="var(--eagle-line)" stroke-width="1.5" stroke-linejoin="round"/>
+      <circle cx="158" cy="47" r="3" fill="#222"/>
+      <path d="M152 41l11 4" stroke="#222" stroke-width="2.6" stroke-linecap="round"/>
+      <g class="wing"><path d="M112 56C100 26 78 8 46 4c16 14 20 26 24 38 8-4 16-2 20 4 8-4 18 0 26 8z" fill="var(--eagle-wing)" stroke="var(--eagle-line)" stroke-width="1.5" stroke-linejoin="round"/></g>
+    </svg>
+  </div>
+  <button class="peek" id="peek" type="button" aria-label="Someone is waving from the edge of the page. Click to find them.">
+    <svg viewBox="0 0 80 90">
+      <defs><clipPath id="shirt"><path d="M8 90C8 68 24 60 40 60s32 8 32 30z"/></clipPath></defs>
+      <path d="M8 90C8 68 24 60 40 60s32 8 32 30z" fill="#fff"/>
+      <g clip-path="url(#shirt)" fill="#d63b2f"><rect x="0" y="63" width="80" height="5"/><rect x="0" y="73" width="80" height="5"/><rect x="0" y="83" width="80" height="7"/></g>
+      <path d="M8 90C8 68 24 60 40 60s32 8 32 30" fill="none" stroke="#2a2a2a" stroke-width="1.6"/>
+      <g class="arm"><path d="M16 74C10 68 8 60 12 52" fill="none" stroke="#d63b2f" stroke-width="7" stroke-linecap="round"/><circle cx="12" cy="49" r="5.5" fill="#f2c9a0" stroke="#2a2a2a" stroke-width="1.4"/></g>
+      <circle cx="42" cy="41" r="18" fill="#f2c9a0" stroke="#2a2a2a" stroke-width="1.6"/>
+      <path d="M24 38C24 16 60 16 60 38z" fill="#d63b2f" stroke="#2a2a2a" stroke-width="1.6"/>
+      <path d="M24 31h36v5H24z" fill="#fff" stroke="#2a2a2a" stroke-width="1.2"/>
+      <circle cx="42" cy="13" r="5" fill="#fff" stroke="#2a2a2a" stroke-width="1.4"/>
+      <circle cx="35" cy="44" r="5" fill="none" stroke="#2a2a2a" stroke-width="1.6"/><circle cx="49" cy="44" r="5" fill="none" stroke="#2a2a2a" stroke-width="1.6"/><path d="M40 44h4" stroke="#2a2a2a" stroke-width="1.6"/>
+      <path d="M36 53q6 5 12 0" fill="none" stroke="#2a2a2a" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <div class="found" id="found" role="status">You found him.</div>
+</div>
+
+<main class="wrap">
+
+<!-- HOME -->
+<section data-page="home">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Computational biology · Vancouver</div>
+      <h1>Reading cell signalling and quality control from the data</h1>
+      <p class="lead">The Gsponer Lab builds computational tools that combine genomic, transcriptomic and proteomic data to study how cells signal and how they keep their proteins in working order. We focus on intrinsically disordered proteins, protein misfolding and aggregation, and what goes wrong in cancer and neurodegenerative disease.</p>
+      <div class="btn-row"><a class="btn" href="#research">Our research</a><a class="btn ghost" href="#join">Join the lab</a></div>
+    </div>
+    <div class="hero-mark"><svg><use href="#logo"/></svg></div>
+  </div>
+
+  <figure class="figure">
+    <div class="scroll">
+      <svg viewBox="0 0 720 190" role="img" aria-label="Diagram of a protein with two folded domains joined by a disordered region, with a short binding motif folding onto a partner protein">
+        <rect x="30" y="56" width="120" height="72" rx="30" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+        <path d="M52 92q8-20 16 0t16 0t16 0" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+        <rect x="560" y="56" width="120" height="72" rx="30" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+        <path d="M582 92q8-20 16 0t16 0t16 0" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+        <path d="M150 92q14-34 28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0t28 0" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M290 92q14-34 28 0t28 0t28 0" fill="none" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/>
+        <path d="M290 54v-6h84v6" fill="none" stroke="var(--accent)" stroke-width="1.6"/>
+        <text class="svg-t hl" x="332" y="40" text-anchor="middle">MoRF</text>
+        <rect x="280" y="136" width="104" height="38" rx="18" fill="var(--bg)" stroke="var(--accent)" stroke-width="2" stroke-dasharray="5 4"/>
+        <text class="svg-t" x="332" y="160" text-anchor="middle">partner</text>
+        <path d="M332 112v22" stroke="var(--accent)" stroke-width="1.8" stroke-dasharray="3 3"/>
+        <text class="svg-t" x="90" y="152" text-anchor="middle">folded domain</text>
+        <text class="svg-t" x="620" y="152" text-anchor="middle">folded domain</text>
+        <text class="svg-t" x="500" y="40" text-anchor="middle">disordered region</text>
+      </svg>
+    </div>
+    <figcaption>Many signalling proteins contain long disordered regions between folded domains. Short motifs inside them (MoRFs) fold when they meet a partner. The lab predicts where these motifs sit and how they bind.</figcaption>
+  </figure>
+
+  <div class="themes">
+    <div class="theme"><h3>Signalling protein structure and function</h3><p>How disordered proteins take part in signalling networks, and how defects in their interactions lead to disease.</p></div>
+    <div class="theme"><h3>Protein misfolding and aggregation</h3><p>Predicting amyloid structures and the disrupted interactions behind Huntington's and prion disease.</p></div>
+  </div>
+
+  <div class="latest">
+    <div class="latest-head"><h2>Recent publications</h2><a href="#publications">All publications</a></div>
+    <ul class="pubs" id="latest-pubs"></ul>
+  </div>
+
+  <div class="cta">
+    <div><h2>Interested in working with us?</h2><p>We take PhD students, postdocs and honours undergraduates.</p></div>
+    <a class="btn" href="#join">See open positions</a>
+  </div>
+</section>
+
+<!-- PEOPLE -->
+<section data-page="people" hidden>
+  <div class="page-head"><div class="eyebrow">People</div><h1>The lab</h1><p>Computational chemists, computer scientists and biochemists working on disordered proteins and disease.</p></div>
+  <div id="pi"></div>
+  <div id="groups"></div>
+</section>
+
+<!-- JOIN -->
+<section data-page="join" hidden>
+  <div class="page-head"><div class="eyebrow">Join</div><h1>Join the lab</h1><p>We are looking for people who like combining biology, chemistry and computing.</p></div>
+  <div class="block">
+    <h2>Open positions</h2>
+    <div class="pos"><h3>PhD and postdoctoral positions</h3><p>Fully supported by PrioNet Canada funding. Contact Dr. Jörg Gsponer with your CV and a short note on your interests.</p></div>
+    <div class="pos"><h3>Undergraduate research honours in computational biomedical research</h3><p>Non-stipend positions for third and fourth-year students. Send your CV to Dr. Gsponer.</p></div>
+  </div>
+  <div class="block">
+    <h2>Who should apply</h2>
+    <div class="prose"><p>Undergraduate applicants should be studying biochemistry, biophysics, computer science or systems biology, and should have completed at least one year of coursework in computer science, computational chemistry or biochemistry.</p></div>
+  </div>
+  <div class="block">
+    <h2>Contact</h2>
+    <div class="contact">
+      <b>Dr. Jörg Gsponer</b>
+      <span class="mono">gsponer@msl.ubc.ca</span>
+      <span>Michael Smith Laboratories, 2185 East Mall, Vancouver, BC V6T 1Z4</span>
+      <span>604 827 4754</span>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section data-page="research" hidden>
+  <div class="page-head"><div class="eyebrow">Research</div><h1>Research</h1><p>Advances in high-throughput biology produce large amounts of pan-omic data. We build the computational methods to turn that data into a systems-level picture of cellular processes.</p></div>
+
+  <div class="area">
+    <div><div class="num">Theme</div><h2>Signalling protein structure and function</h2></div>
+    <div class="prose">
+      <p>Intrinsically disordered proteins (IDPs) lack a stable three-dimensional structure on their own. They sit at the centre of signalling and regulatory cascades in eukaryotic cells, and defects in their interactions are linked to disease.</p>
+      <p>We develop computational methods to:</p>
+      <ul>
+        <li>identify the structures of signalling protein complexes,</li>
+        <li>assess how IDPs fit into signalling networks,</li>
+        <li>determine the structural constraints on protein evolution and regulation.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="area">
+    <div><div class="num">Theme</div><h2>Protein misfolding and aggregation</h2></div>
+    <div class="prose">
+      <p>We study protein aggregation in neurodegenerative disease by computational means. This includes predicting the structures proteins adopt in amyloid fibrils.</p>
+      <p>We also use high-throughput screening to understand how protein interactions are disrupted in diseases such as Huntington's and Creutzfeldt-Jakob disease, and which signalling pathways are affected.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>Recent directions</h2>
+    <div class="dirs">
+      <div class="dir"><h3>Disorder and AlphaFold</h3><p>Testing how well AlphaFold-Multimer captures interactions and dynamics of disordered regions.</p><a href="https://www.pnas.org/doi/10.1073/pnas.2406407121" target="_blank" rel="noopener">PNAS 2024</a></div>
+      <div class="dir"><h3>Phase separation</h3><p>Predicting which proteins enter biomolecular condensates, and benchmarking phase-separation predictors.</p><a href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkac279/6574678" target="_blank" rel="noopener">GraPES, NAR 2022</a></div>
+      <div class="dir"><h3>Autoinhibition in cancer</h3><p>Mapping how cancer mutations alter protein autoinhibition across human cancers.</p><a href="https://www.sciencedirect.com/science/article/pii/S2405471224000309" target="_blank" rel="noopener">Cell Systems 2024</a></div>
+      <div class="dir"><h3>Genetic modifiers</h3><p>A multi-layered network model that finds shared modifiers of neurodegeneration, including Akt1.</p><a href="https://www.embopress.org/doi/full/10.15252/msb.202311801" target="_blank" rel="noopener">Mol Syst Biol 2023</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section data-page="publications" hidden>
+  <div class="page-head"><div class="eyebrow">Publications</div><h1>Publications</h1><p>Selected recent papers, newest first. Gsponer is in bold.</p></div>
+  <div class="pub-tools"><input id="pub-q" type="search" placeholder="Filter by title, author or journal" aria-label="Filter publications"><span class="count" id="pub-count"></span></div>
+  <div id="pub-list"></div>
+</section>
+
+<!-- SOFTWARE -->
+<section data-page="software" hidden>
+  <div class="page-head"><div class="eyebrow">Software</div><h1>Software</h1><p>Predictors and analysis tools developed in the lab.</p></div>
+  <div class="cards" id="sw-list"></div>
+</section>
+
+<!-- DATABASES -->
+<section data-page="databases" hidden>
+  <div class="page-head"><div class="eyebrow">Databases</div><h1>Databases</h1><p>Data resources built with our collaborators.</p></div>
+  <div class="cards" id="db-list"></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Gsponer Lab</b><br>Michael Smith Laboratories<br>University of British Columbia</div>
+    <div>2185 East Mall<br>Vancouver, BC V6T 1Z4<br>604 827 4754</div>
+    <div class="mono">gsponer@msl.ubc.ca</div>
+    <div class="note">Draft redesign. Content is taken from the current site and public profiles. Dashed boxes mark placeholders to fill in.</div>
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
