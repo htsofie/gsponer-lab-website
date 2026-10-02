@@ -20,7 +20,9 @@ function authors(a) {
 }
 const pubItem = p => `<li class="pub"><a class="t" href="${esc(p[4])}" target="_blank" rel="noopener">${esc(p[2])}</a><div class="au">${authors(p[1])}</div><div class="j">${esc(p[3])} · ${p[0]}</div></li>`;
 
-document.getElementById('latest-pubs').innerHTML = PUBS.slice(0,3).map(pubItem).join('');
+const RECENT = [0, 2, 4]; /* indices into PUBS shown on the home page */
+document.getElementById('latest-pubs').innerHTML = RECENT.map(i => pubItem(PUBS[i])).join('');
+document.getElementById('news-list').innerHTML = NEWS.map(n => `<div class="year"><h2>${n[0]}</h2><div class="pub"><div class="t">${esc(n[1])}</div><div class="au">${esc(n[2])}</div></div></div>`).join('') + '<div class="year"><h2>&nbsp;</h2><div class="pub"><span class="todo">add news item</span></div></div>';
 const years = [...new Set(PUBS.map(p => p[0]))];
 document.getElementById('pub-list').innerHTML = years.map(y => `<div class="year" data-y="${y}"><h2>${y}</h2><ul class="pubs">${PUBS.filter(p => p[0] === y).map(pubItem).join('')}</ul></div>`).join('') + '<p class="empty" id="pub-empty" hidden>No publications match.</p>';
 

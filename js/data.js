@@ -1,6 +1,6 @@
-const PAGES = ['home','people','join','research','publications','software','databases'];
+const PAGES = ['home','research','publications','people','join','software','databases','news'];
 
-/* Site content. Edit people, publications, software and databases here. */
+/* Site content. Edit people, publications, news, software and databases here. */
 const PI = {
   name: 'Jörg Gsponer', role: 'Principal Investigator · Professor · Head, Biochemistry & Molecular Biology', photo: '',
   bio: [
@@ -58,6 +58,12 @@ const PUBS = [
  [2022,'Holguin-Cruz JA, Foster LJ, Gsponer J','Where protein structure and cell diversity meet','Trends Cell Biol 32(12):996-1007','https://www.sciencedirect.com/science/article/pii/S0962892422000927'],
  [2022,'Kuechler ER, Jacobson M, Mayor T, Gsponer J','GraPES: the Granule Protein Enrichment Server for prediction of biological condensate constituents','Nucleic Acids Res 50:W384-W391','https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkac279/6574678'],
  [2021,'Skinnider MA, Acott ES, Prudova A, Kerr CH, Stonynov N, Stancey RG, Chan QWT, Rattray D, Gsponer J, Foster LJ','An atlas of protein-protein interactions across mouse tissues','Cell 184(15):4073-4089','https://www.cell.com/cell/fulltext/S0092-8674(21)00704-2']
+];
+const NEWS = [
+ [2026,'MoRFchibi 2.0 published','Malhis and Gsponer present MoRFchibi 2.0, which outperforms existing predictors of protein-binding sites in disordered regions. BMC Bioinformatics.'],
+ [2026,'Review in Cell Systems','Omidi, Bui and Gsponer examine why dynamics and disorder remain a challenge for predicting protein interfaces in the age of AlphaFold.'],
+ [2025,'NSERC Discovery Grant','Dr. Gsponer received a 2025 NSERC Discovery Grant.'],
+ [2025,'AlphaFold and allosteric transitions','Communications Chemistry paper testing AlphaFold on proteins with large-scale allosteric transitions.']
 ];
 const SW = [
  ['GraPES','Granule Protein Enrichment Server. Predicts which proteins are constituents of biological condensates.','https://grapes.msl.ubc.ca',''],

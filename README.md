@@ -23,6 +23,7 @@ Open http://localhost:8000.
 
 - **Add a person or photo:** edit `GROUPS` in `js/data.js`. Put photos in `img/` and set `photo: 'img/name.jpg'`. Empty `email`, `linkedin` or `bio` fields show a dashed placeholder.
 - **Add a publication:** add a row at the top of `PUBS` in `js/data.js`: `[year, authors, title, journal, url]`.
+- **Add a news item:** add a row to `NEWS` in `js/data.js`: `[year, title, text]`.
 - **Add software or a database:** edit `SW` or `DB` in `js/data.js`.
 
 ## Working together
