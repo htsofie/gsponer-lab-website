@@ -33,6 +33,8 @@ const GROUPS = [
   ]}
 ];
 const PUBS = [
+ [2026,'Omidi A, He J, Bui JM, Gsponer J, Syed S','De novo design of protein switches with diffusion-based ensemble sampling','bioRxiv preprint','https://www.biorxiv.org/content/10.64898/2026.07.20.739027v1'],
+ [2026,'Omidi A, He J, Gsponer J, Syed S','METALICA: METAdynamics and repLICA exchange for enhanced diffusion sampling','arXiv preprint','https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AObjzWEAAAAJ&citation_for_view=AObjzWEAAAAJ:YOwf2qJgpHMC'],
  [2026,'Malhis N, Gsponer J','Predicting molecular recognition features in protein sequences with MoRFchibi 2.0','BMC Bioinformatics (in press)','https://link.springer.com/article/10.1186/s12859-026-06532-x'],
  [2026,'Omidi A, Bui JA, Gsponer J','Predicting protein interfaces in the age of AlphaFold: Why dynamics and disorder remain a challenge','Cell Systems 17(1):101508','https://www.cell.com/cell-systems/abstract/S2405-4712(25)00341-2'],
  [2026,'Cen HH, Mattison AJ, Omidi A, Rogalski J, Abraham L, Gao G, Gold MR, Foster LJ, Gsponer J, Johnson JD','Insulin receptor trafficking and interactions in muscle cells','J Endocr Soc 10(4):bvag020','https://academic.oup.com/jes/article/10/4/bvag020/8443044'],

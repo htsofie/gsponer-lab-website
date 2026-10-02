@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design option B: coral and sky</title>
+<style>
+  body { margin: 0; padding: 32px 16px; background: #fff; font-family: 'Avenir Next', 'Segoe UI', system-ui, sans-serif; color: #15233f; }
+  .note { max-width: 760px; margin: 0 auto 16px; font-size: 14px; color: #55606e; }
+  .frame { max-width: 760px; margin: 0 auto; border: 1px solid #dbe4de; border-radius: 12px; overflow: hidden; background: #f3f9fd; }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 24px; flex-wrap: wrap; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo i { width: 36px; height: 36px; border-radius: 50%; border: 1.5px dashed #7f77dd; background: #e8e6fb; display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 9px; color: #534ab7; }
+  .logo b { font-size: 15px; line-height: 1.05; letter-spacing: 0.02em; text-transform: uppercase; }
+  .links { display: flex; align-items: center; gap: 18px; font-size: 13px; flex-wrap: wrap; }
+  .coral { background: #f26b6b; color: #15233f; font-weight: 700; font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; padding: 9px 14px; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); align-items: center; min-height: 330px; }
+  .copy { padding: 20px 24px 36px; }
+  .h1a { font-weight: 700; font-size: 34px; line-height: 1.1; }
+  .h1b { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 600; font-size: 34px; line-height: 1.15; margin-bottom: 16px; }
+  .copy p { font-size: 13.5px; line-height: 1.6; margin: 0 0 20px; max-width: 340px; }
+  .cta { display: inline-block; padding: 11px 18px; box-shadow: 4px 4px 0 #8a93a6; }
+  svg { display: block; height: 100%; min-height: 330px; width: 100%; }
+  .swatches { max-width: 760px; margin: 12px auto 0; display: flex; flex-wrap: wrap; gap: 14px 20px; font-size: 13px; color: #55606e; }
+  .swatches span { display: flex; align-items: center; gap: 6px; }
+  .swatches i { width: 14px; height: 14px; display: inline-block; border: 1px solid #dbe4de; }
+  @media (max-width: 600px) { .hero { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<p class="note">Design option B for the Gsponer Lab home page. Mockup only; not wired into the site. Palette: mist #f3f9fd, navy #15233f, coral #f26b6b, violet #9b8cf7, sky #8fd0f0. Type: bold geometric sans with an italic serif accent.</p>
+<div class="frame">
+  <div class="nav">
+    <div class="logo"><i>logo</i><b>Gsponer<br>Lab</b></div>
+    <div class="links">
+      <span>Research</span><span>Publications</span><span>People</span><span>Software</span><span>Databases</span><span>News</span>
+      <span class="coral">Join the lab</span>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="copy">
+      <div class="h1a">Protein design.</div>
+      <div class="h1b">Computational biology.</div>
+      <p>The Gsponer Lab uses gen-AI, machine learning and statistical analysis to analyse protein structure and function. We design protein binders, build interaction prediction methods, and study how phosphorylation switches proteins on and off.</p>
+      <span class="coral cta">Our research</span>
+    </div>
+    <svg viewBox="0 0 300 330" role="img" aria-label="Illustration: coral and violet protein ribbons over a sky blue circle">
+      <circle cx="170" cy="160" r="105" fill="none" stroke="#d9d4fa" stroke-width="3"/>
+      <circle cx="250" cy="170" r="170" fill="#8fd0f0"/>
+      <circle cx="250" cy="170" r="170" fill="#cdeefb" opacity="0.5" transform="translate(-50 40) scale(0.7)"/>
+      <path d="M120 70q28-56 56 0t56 0t56 0t56 0" fill="none" stroke="#f26b6b" stroke-width="26" stroke-linecap="round" opacity="0.92"/>
+      <path d="M120 70q28-56 56 0t56 0t56 0t56 0" fill="none" stroke="#fbb4b4" stroke-width="5" stroke-linecap="round" transform="translate(0 -5)"/>
+      <path d="M90 190q36-70 72 0t72 0t72 0" fill="none" stroke="#9b8cf7" stroke-width="20" stroke-linecap="round" opacity="0.92"/>
+      <path d="M150 240q22 30 54 14t28-44" fill="none" stroke="#f26b6b" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+      <circle cx="226" cy="204" r="9" fill="#15233f"/>
+      <circle cx="120" cy="214" r="6" fill="#9b8cf7"/>
+      <circle cx="196" cy="110" r="5" fill="#15233f" opacity="0.5"/>
+    </svg>
+  </div>
+</div>
+<div class="swatches">
+  <span><i style="background:#f3f9fd"></i>Mist background</span>
+  <span><i style="background:#15233f"></i>Navy text</span>
+  <span><i style="background:#f26b6b"></i>Coral buttons</span>
+  <span><i style="background:#9b8cf7"></i>Violet</span>
+  <span><i style="background:#8fd0f0"></i>Sky blue</span>
+</div>
+</body>
+</html>

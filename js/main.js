@@ -20,7 +20,7 @@ function authors(a) {
 }
 const pubItem = p => `<li class="pub"><a class="t" href="${esc(p[4])}" target="_blank" rel="noopener">${esc(p[2])}</a><div class="au">${authors(p[1])}</div><div class="j">${esc(p[3])} · ${p[0]}</div></li>`;
 
-const RECENT = [0, 2, 4]; /* indices into PUBS shown on the home page */
+const RECENT = [0, 1, 2, 4]; /* indices into PUBS shown on the home page */
 document.getElementById('latest-pubs').innerHTML = RECENT.map(i => pubItem(PUBS[i])).join('');
 document.getElementById('news-list').innerHTML = NEWS.map(n => `<div class="year"><h2>${n[0]}</h2><div class="pub"><div class="t">${esc(n[1])}</div><div class="au">${esc(n[2])}</div></div></div>`).join('') + '<div class="year"><h2>&nbsp;</h2><div class="pub"><span class="todo">add news item</span></div></div>';
 const years = [...new Set(PUBS.map(p => p[0]))];
@@ -74,3 +74,45 @@ const found = document.getElementById('found'); let ft;
 document.getElementById('peek').addEventListener('click', () => {
   found.classList.add('on'); clearTimeout(ft); ft = setTimeout(() => found.classList.remove('on'), 2200);
 });
+
+/* ---------- intro ---------- */
+function startIntro() {
+  const tpl = document.getElementById('intro-tpl');
+  document.body.appendChild(tpl.content.cloneNode(true));
+  const el = document.body.lastElementChild;
+  const colors = ['#2f6b4a', '#4f8a66', '#7fa88c', '#a9c6b2', '#c9a77f', '#a9825a', '#dcc7a6'];
+  let seed = 7; const r = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+  const pick = () => colors[Math.floor(r() * colors.length)];
+  const items = [];
+  const add = (x, y, s, rot) => {
+    const c1 = pick(), c2 = pick();
+    items.push({ y, html: `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${rot.toFixed(0)}) scale(${s.toFixed(2)})" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-34 -4q8-22 17 0t17 0t17 0t14 -2" stroke="${c1}" stroke-width="9"/><path d="M-32 10c12 16 26-18 42-2s22 10 32-4" stroke="${c2}" stroke-width="3"/><path d="M-26 22h42" stroke="${c2}" stroke-width="7"/><path d="M14 14l15 8l-15 8z" fill="${c2}" stroke="none"/></g>` });
+  };
+  [[545, 10, 140, 860], [497, 9, 170, 830], [449, 8, 200, 800], [401, 6, 260, 740], [355, 4, 330, 670], [318, 2, 420, 580]].forEach(([y, n, x0, x1]) => {
+    for (let i = 0; i < n; i++) add(x0 + (x1 - x0) * i / (n - 1) + (r() - 0.5) * 24, y + (r() - 0.5) * 20, 0.95 + r() * 0.4, (r() - 0.5) * 80);
+  });
+  for (let i = 0; i < 30; i++) { const a = r() * 6.283, d = Math.sqrt(r()); add(500 + Math.cos(a) * d * 150, 430 + Math.sin(a) * d * 90, 1 + r() * 0.5, r() * 180 - 90); }
+  items.sort((a, b) => b.y - a.y);
+  el.querySelector('.pile').innerHTML = items.map(i => i.html).join('');
+  document.body.style.overflow = 'hidden';
+  const end = () => { el.remove(); document.body.style.overflow = ''; };
+  el.addEventListener('animationend', e => { if (e.animationName === 'introOut') end(); });
+  const skip = el.querySelector('.intro-skip');
+  skip.addEventListener('click', end);
+  skip.focus();
+}
+document.getElementById('replay').addEventListener('click', () => { if (!document.querySelector('.intro')) { show('home'); startIntro(); } });
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && (location.hash === '' || location.hash === '#home')) startIntro();
+
+/* ---------- banner fades into the page on scroll ---------- */
+(function () {
+  const banner = document.querySelector('.banner'), img = document.querySelector('.banner-img');
+  let ticking = false;
+  function update() {
+    ticking = false;
+    const y = window.scrollY, h = banner.offsetHeight;
+    banner.style.opacity = Math.max(0, 1 - y / (h * 0.8));
+    img.style.transform = 'translateY(' + Math.round(y * 0.2) + 'px)';
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+})();
